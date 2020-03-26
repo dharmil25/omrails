@@ -27,6 +27,7 @@ gem 'bootstrap', '~> 4.0.0.alpha4'
 gem 'jquery-rails'
 gem 'devise'
 gem 'activeadmin'
+gem 'acts_as_follower', github: 'tcocca/acts_as_follower', branch: 'master'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
