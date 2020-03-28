@@ -4,8 +4,10 @@
     <%= link_to @tweet.user.username, user_path(@tweet.user.username) %>
   </p>
   
-  <%= link_to @tweet.image.url do %>
-    <%= image_tag @tweet.image.url, class: "thumbnail" %>
+  <% if @tweet.image.present? %>
+    <%= link_to @tweet.image.url do %>
+      <%= image_tag @tweet.image.url, class: "thumbnail" %>
+    <% end %>
   <% end %>
 
   <p>
