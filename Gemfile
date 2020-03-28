@@ -29,7 +29,7 @@ gem 'devise'
 gem 'activeadmin'
 gem 'acts_as_follower', github: 'tcocca/acts_as_follower', branch: 'master'
 gem 'acts_as_votable'
-gem "paperclip", "~> 5.0.0"
+gem "paperclip", "~> 5.2.0"
 
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
