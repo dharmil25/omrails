@@ -6,6 +6,7 @@
     <tr>
       <th>User</th>
       <th>Content</th>
+      <th>Image</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -15,6 +16,13 @@
       <tr>
         <td><%= link_to tweet.user.username, user_path(tweet.user.username) %></td>
         <td><%= tweet.content %></td>
+        <% if tweet.image.present? %>
+          <td><%= link_to tweet.image.url do %>
+            <%= image_tag tweet.image.url(:medium), class: "thumbnail" %>
+          <% end %></td>
+        <% else %>
+            <td></td>
+        <% end %>
         <td><%= link_to 'Show', tweet %></td>
         <% if tweet.user == current_user %>
           <td><%= link_to 'Edit', edit_tweet_path(tweet) %></td>

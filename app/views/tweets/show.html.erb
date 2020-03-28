@@ -4,6 +4,10 @@
     <%= link_to @tweet.user.username, user_path(@tweet.user.username) %>
   </p>
 
+  <%= link_to @tweet.image.url do %>
+    <%= image_tag @tweet.image.url(:medium), class: "thumbnail" %>
+  <% end %>
+
   <p>
     <strong>Content:</strong>
     <%= @tweet.content %>
